@@ -9,4 +9,15 @@ body {
     margin-right: auto;
     margin-top: 2px;
     background-image: url(../image/background.png);
+    display: flex;
+}
+
+.column_avatar {
+    width: 25%;
+    display: inline-block;
+}
+
+.column_personal-data {
+    width: 75%;
+    display: inline-block;
 }
