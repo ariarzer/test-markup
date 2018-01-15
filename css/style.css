@@ -13,11 +13,11 @@ body {
 }
 
 .column_avatar {
-    width: 25%;
+    width: 200px;
     display: inline-block;
 }
 
 .column_personal-data {
-    width: 75%;
+    width: 532px;
     display: inline-block;
 }
