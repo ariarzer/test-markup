@@ -60,3 +60,20 @@ body {
 .column--2{
     flex-direction: column;
 }
+
+.column_header{
+    display: flex;
+    align-items: center;
+    height: 75px;
+    width: 100%;
+    vertical-align: middle;
+    padding-left: 15px;
+}
+
+.column_line{
+    display: flex;
+    flex-directoin: row;
+    height: 73px;
+    margin: auto;
+    width: 100%;
+}
