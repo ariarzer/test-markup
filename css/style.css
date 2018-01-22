@@ -56,3 +56,7 @@ body {
     position: absolute;
     bottom: 10px;
 }
+
+.column--2{
+    flex-direction: column;
+}
