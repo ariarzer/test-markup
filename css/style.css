@@ -85,3 +85,28 @@ body {
     padding-left: 15px;
     height: 100%;
 }
+
+.column_checkbox {
+    display: none;
+}
+
+.column_label-for-checkbox,
+.column_label-for-checkbox::before{
+    display: flex;
+    justify-content: center;
+}
+
+.column_checkbox:not(checked) + .column_label-for-checkbox::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: #EEEEEE;
+    border-radius: 3px;
+}
+
+.column_checkbox:checked + .column_label-for-checkbox::before{
+    background: #0093D7;
+    content: "✓";
+    text-align: center;
+    color: white;
+}
