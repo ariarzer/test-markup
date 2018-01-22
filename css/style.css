@@ -77,3 +77,11 @@ body {
     margin: auto;
     width: 100%;
 }
+
+.column_cell{
+    display: flex;
+    align-items: center;
+    width: 183px;
+    padding-left: 15px;
+    height: 100%;
+}
