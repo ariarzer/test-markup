@@ -46,3 +46,13 @@ body {
     height: 140px;
     border-radius: 50%;
 }
+
+.colum_print {
+    margin-left: -194px;
+    position: relative;
+}
+
+.colum_img-print {
+    position: absolute;
+    bottom: 10px;
+}
