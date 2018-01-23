@@ -83,6 +83,8 @@ body {
     height: 73px;
     margin: auto;
     width: 100%;
+    font-size: 17px;
+    color: #666666;
 }
 
 .column_cell{
