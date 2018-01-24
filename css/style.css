@@ -64,23 +64,24 @@ body {
 
 .column--2{
     flex-direction: column;
+    justify-content: center;
 }
 
 .column_header{
     display: flex;
     align-items: center;
-    height: 75px;
+    height: 30px;
     width: 100%;
     vertical-align: middle;
-    padding-left: 15px;
+    padding-left: 20px;
     font-weight: bold;
     font-size: 20px;
 }
 
 .column_line{
     display: flex;
+    height: 70px;
     flex-directoin: row;
-    height: 73px;
     margin: auto;
     width: 100%;
     font-size: 17px;
@@ -91,7 +92,7 @@ body {
     display: flex;
     align-items: center;
     width: 183px;
-    padding-left: 15px;
+    padding-left: 20px;
     height: 100%;
 }
 
