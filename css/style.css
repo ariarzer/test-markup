@@ -112,6 +112,7 @@ body {
     height: 20px;
     background: #EEEEEE;
     border-radius: 3px;
+    margin-right: 10px;
 }
 
 .column_checkbox:checked + .column_label-for-checkbox::before{
