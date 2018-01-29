@@ -96,17 +96,17 @@ body {
     height: 100%;
 }
 
-.column_checkbox {
+.checkbox {
     display: none;
 }
 
-.column_label-for-checkbox,
-.column_label-for-checkbox::before{
+.checkbox_label,
+.checkbox_label::before{
     display: flex;
     justify-content: center;
 }
 
-.column_checkbox:not(checked) + .column_label-for-checkbox::before{
+.checkbox:not(checked) + .checkbox_label::before{
     content: "";
     width: 20px;
     height: 20px;
@@ -115,7 +115,7 @@ body {
     margin-right: 10px;
 }
 
-.column_checkbox:checked + .column_label-for-checkbox::before{
+.checkbox:checked + .checkbox_label::before{
     background: #0093D7;
     content: "✓";
     text-align: center;
