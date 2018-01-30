@@ -91,22 +91,25 @@ body {
 .column_cell{
     display: flex;
     align-items: center;
-    width: 183px;
-    padding-left: 20px;
     height: 100%;
 }
 
-.checkbox {
+.skill{
+    width: 183px;
+    padding-left: 20px;
+}
+
+.skill_checkbox {
     display: none;
 }
 
-.checkbox_label,
-.checkbox_label::before{
+.skill_label-for-checkbox,
+.skill_label-for-checkbox::before{
     display: flex;
     justify-content: center;
 }
 
-.checkbox:not(checked) + .checkbox_label::before{
+.skill_checkbox:not(checked) + .skill_label-for-checkbox::before{
     content: "";
     width: 20px;
     height: 20px;
@@ -115,7 +118,7 @@ body {
     margin-right: 10px;
 }
 
-.checkbox:checked + .checkbox_label::before{
+.skill_checkbox:checked + .skill_label-for-checkbox::before{
     background: #0093D7;
     content: "✓";
     text-align: center;
