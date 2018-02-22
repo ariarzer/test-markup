@@ -124,3 +124,85 @@ body {
     text-align: center;
     color: white;
 }
+
+.column_indicator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 60px;
+}
+
+.indicator{
+    position: relative;
+    --arrow-width: 9px;
+    --arrow-height: 70px;
+}
+
+.indicator_face{
+    width: 294px;
+    height: 147px;
+    overflow: hidden;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #FFF;
+}
+
+.indicator_face::after{
+    width: 60%;
+    height: 60%;
+    content: "";
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    background: #FFF;
+    z-index: 0;
+}
+
+.indicator_sector{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    transform-origin: left bottom;
+}
+
+.indicator_top-sector{
+    transform: rotate(-30deg) skewY(150deg);
+    background: #A3CD3B;
+    bottom: 5px;
+}
+
+.indicator_left-sector{
+    transform: rotate(30deg) skewY(150deg);
+    background: #FFC815;
+    bottom: -5px;
+}
+
+.indicator_right-sector{
+    transform: rotate(-90deg) skewY(150deg);
+    background: #0093D7;
+    bottom: -5px;
+}
+
+.indicator_arrow{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    left: calc(50% - var(--arrow-width));
+    bottom: 0px;
+    border: var(--arrow-width) solid transparent;
+    border-bottom: 70px solid #3E3D40;
+}
+
+.indicator_arrow::after{
+    width: 0px;
+    height: 0px;
+    content: "";
+    position: absolute;
+    left: calc(50% - var(--arrow-width));
+    bottom: calc((var(--arrow-height) + var(--arrow-width) ) * (-1));
+    border: var(--arrow-width) solid #3E3D40;
+    border-radius: 50%;
+}
