@@ -35,7 +35,6 @@ body {
     font-size: 17px;
     color: #666666;
     text-transform: uppercase;
-    line-height: -5px;
 }
 
 .column_div-for-avatar{
@@ -81,7 +80,6 @@ body {
 .column_line{
     display: flex;
     height: 70px;
-    flex-directoin: row;
     margin: auto;
     width: 100%;
     font-size: 17px;
@@ -136,6 +134,7 @@ body {
     position: relative;
     --arrow-width: 9px;
     --arrow-height: 70px;
+    --rotate: -90deg;
 }
 
 .indicator_face{
@@ -187,13 +186,18 @@ body {
 }
 
 .indicator_arrow{
-    width: 1px;
-    height: 1px;
+    width: 0px;
+    height: 0px;
     position: absolute;
     left: calc(50% - var(--arrow-width));
     bottom: 0px;
     border: var(--arrow-width) solid transparent;
-    border-bottom: 70px solid #3E3D40;
+    border-bottom: var(--arrow-height) solid #3E3D40;
+
+    transform: rotate(var(--rotate));
+    transform-origin: var(--arrow-width) calc(var(--arrow-height) + var(--arrow-width)) 0px;
+    transition-duration: 1s;
+    transition-property: transform;
 }
 
 .indicator_arrow::after{
@@ -202,7 +206,7 @@ body {
     content: "";
     position: absolute;
     left: calc(50% - var(--arrow-width));
-    bottom: calc((var(--arrow-height) + var(--arrow-width) ) * (-1));
-    border: var(--arrow-width) solid #3E3D40;
+    bottom: calc((var(--arrow-height) + var(--arrow-width)) * (-1));
+    border: calc(var(--arrow-width)) solid #3E3D40;
     border-radius: 50%;
 }
