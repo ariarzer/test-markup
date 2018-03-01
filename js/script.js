@@ -1,23 +1,44 @@
-const setCSSVar = (element, key, value) => element.style.setProperty(`--${key}`, value);
-const isChecked = (name) => document.getElementById(name).checked;
-
 var indicatorArrow = document.getElementById('indicator_arrow');
 
 var checkboxList = document.querySelectorAll('[data-skills-checkbox]');
 
-for(var i = 0; i < 12; i++){
-  checkboxList.item(i).addEventListener('change', function (){
-    rotateArrow(this.checked);})
+var skillList = [];
+
+const setCSSVar = (element, key, value) => element.style.setProperty(`--${key}`, value);
+
+var i = 0;
+while(!(checkboxList.item(i) === null)){
+  skillList.push(new SkillCheckbox(checkboxList.item(i)));
+  i++;
 }
 
-var rotate = -90;
-
-for(var i = 1; i <= 12; i++){
-  rotate += (180 / 12) * (isChecked('skills_' + i.toString().padStart(3, '0')) ? +1 : 0);
-}
-setCSSVar(indicatorArrow, "rotate", rotate + 'deg');
+var rotate = initCorner(skillList);
 
 function rotateArrow(value){
   rotate += (180 / 12) * (value ? +1 : -1);
   setCSSVar(indicatorArrow, "rotate", rotate + 'deg');
+}
+
+function SkillCheckbox(element){
+  this.block = element;
+  this.id =  element.id;
+  this.checked = element.checked;
+
+  element.addEventListener('change', function (){
+    rotateArrow(this.checked);
+    this.checked = element.checked;
+  })
+}
+
+function initCorner(skillList){
+  var rotate = -90;
+
+  var i = 0;
+  while(!(checkboxList.item(i) === null)){
+    rotate += (180 / 12) * (skillList[i].checked ? +1 : 0);
+    i++;
+  }
+  setCSSVar(indicatorArrow, "rotate", rotate + 'deg');
+
+  return rotate;
 }
