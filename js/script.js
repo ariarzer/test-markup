@@ -24,9 +24,10 @@ function SkillCheckbox(element){
   this.id =  element.id;
   this.checked = element.checked;
 
+  var self = this;
   element.addEventListener('change', function (){
     rotateArrow(this.checked);
-    this.checked = element.checked;
+    self.checked = element.checked;
   })
 }
 
