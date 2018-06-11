@@ -77,24 +77,20 @@ body {
     font-size: 20px;
 }
 
-.column__line{
-    display: flex;
-    height: 70px;
-    margin: auto;
-    width: 100%;
-    font-size: 17px;
+.column__skill-table{
     color: #666666;
+    display: grid;
+    grid-template-columns: repeat(4, 163px);
+    grid-template-rows: repeat(3, 70px);
+    grid-column-gap: 20px;
+    grid-row-gap: 0;
+    margin-left: 20px;
 }
 
 .column__cell{
     display: flex;
     align-items: center;
     height: 100%;
-}
-
-.skill{
-    width: 183px;
-    padding-left: 20px;
 }
 
 .skill__checkbox {
